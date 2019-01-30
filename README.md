@@ -16,7 +16,7 @@ Copy the private key to ```~\.ssh\id_ed25519``` </br> (if you are using a differ
 > ```ssh grader@udacity-postgresql-test.northeurope.cloudapp.azure.com -p 2200 -i ~\.ssh\id_ed25519```
 
 On Windows:<br/>
-use the same command as in Linux/Mac in powershell or use putty:
+Use the same command as in Linux/Mac in powershell or use putty:
 Host Name (or IP address): grader@udacity-postgresql-test.northeurope.cloudapp.azure.com
 > Port: 2200
 Connection -> SSH -> Auth:
