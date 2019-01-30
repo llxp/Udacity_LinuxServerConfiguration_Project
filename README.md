@@ -92,8 +92,42 @@ MaxAuthTries 6
 PubkeyAuthentication yes
 AuthorizedKeysFile      %h/.ssh/authorized_keys
 PasswordAuthentication no
-
 ```
+To activate the flask apache2 configuration I used the following command:
+```sudo a2ensite flask```
+and
+```sudo service apache2 restart```
+to restart the apache2 service
+To deploy the Item Catalog Project I used the following command:
+```sudo git clone https://github.com/llxp/udacity_fsnd_itemcatalog_backend /var/www/```
+and then created the file ```myapp.wsgi``` with the content from above.
+In the end I needed to install the dependencies of the flask app:
+```
+sudo mkdir /var/www/.cache/
+sudo mkdir /var/www/.local/
+chown -R root:www-data /var/www/.cache/
+chown -R root:www-data /var/www/.local/
+sudo pip install flask-bootstrap
+sudo pip install psycopg2
+sudo -H www-data pip install psycopg2-binary
+sudo -H -u www-data pip install flask-bootstrap
+sudo pip install -r /var/www/udacity_fsnd_itemcatalog_backend/requirements.txt
+sudo -H -u www-data pip3 install -r /var/www/udacity_fsnd_itemcatalog_backend/requirements.txt
+```
+
+## Security ##
+The directory /var/www/udacity_fsnd_itemcatalog_backend was set to the owner ```root``` and the group ```www-data``` and permissions where set to:
+
+*.py: 550
+plain text files: 700
+itemcatalog.db: 760
+client_secrets.json: 740
+
+The *.py and the myapp.wsgi files where set to owner ```www-data``` and group ```www-data```
+The plain text files where set to owner ```root``` and group ```root```
+The directories ```static``` and ```templates``` where set to owner ```www-data``` and group ```www-data```
+
+#
 This project was completed using the learning resources found on the following pages:
 - [udacity](https://udacity.com)
 - [stackoverflow.com](https://stackoverflow.com)
