@@ -2,7 +2,7 @@
 
 Host: [udacity-postgresql-test.northeurope.cloudapp.azure.com](http://udacity-postgresql-test.northeurope.cloudapp.azure.com)
 ### Access to the server: ###
-The server is powered off by default to reduce cost.<br/>
+The server is powered off by default to reduce some costs.<br/>
 To start the server simply go to<br/>
 [https://udacity-vm-manager.azurewebsites.net/](https://udacity-vm-manager.azurewebsites.net/)<br/>
 and enter the private ssh key into the textarea.<br/>
