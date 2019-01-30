@@ -93,14 +93,14 @@ PubkeyAuthentication yes
 AuthorizedKeysFile      %h/.ssh/authorized_keys
 PasswordAuthentication no
 ```
-To activate the flask apache2 configuration I used the following command:
-```sudo a2ensite flask```
-and
-```sudo service apache2 restart```
-to restart the apache2 service
-To deploy the Item Catalog Project I used the following command:
-```sudo git clone https://github.com/llxp/udacity_fsnd_itemcatalog_backend /var/www/```
-and then created the file ```myapp.wsgi``` with the content from above.
+To activate the flask apache2 configuration I used the following command:<br/>
+```sudo a2ensite flask```<br/>
+and<br/>
+```sudo service apache2 restart```<br/>
+to restart the apache2 service<br/>
+To deploy the Item Catalog Project I used the following command:<br/>
+```sudo git clone https://github.com/llxp/udacity_fsnd_itemcatalog_backend /var/www/```<br/>
+and then created the file ```myapp.wsgi``` with the content from above.<br/>
 In the end I needed to install the dependencies of the flask app:
 ```
 sudo mkdir /var/www/.cache/
