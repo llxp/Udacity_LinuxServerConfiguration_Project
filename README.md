@@ -8,7 +8,7 @@ To start the server simply go to<br/>
 and enter the private ssh key into the textarea.<br/>
 When the Status is "deallocated" press on the button "Start".<br/>
 The machine needs about 2 minutes to be fully powered on.<br/>
-When the access on the server is over, simply press on "Stop" again.<br/>
+When the access on the server is over, simply press on "Stop" again to poweroff the server.<br/>
 
 #### Image: Ubuntu 18.04.1 LTS (amd64) ####
 #### packages installed: ####
@@ -85,5 +85,5 @@ This project was completed using the learning resources found on the following p
 - [udacity](https://udacity.com)
 - [stackoverflow.com](https://stackoverflow.com)
 - [askubuntu.com](https://askubuntu.com)
-- https://jsephler.co.uk/session-issue-with-flask-deployment-apache2-wgsi-flask/
-- https://security.stackexchange.com/questions/143442/what-are-ssh-keygen-best-practices
+- [https://jsephler.co.uk/session-issue-with-flask-deployment-apache2-wgsi-flask/](https://jsephler.co.uk/session-issue-with-flask-deployment-apache2-wgsi-flask/)
+- [https://security.stackexchange.com/questions/143442/what-are-ssh-keygen-best-practices](https://security.stackexchange.com/questions/143442/what-are-ssh-keygen-best-practices)
