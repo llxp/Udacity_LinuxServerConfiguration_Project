@@ -10,9 +10,11 @@ and enter the private ssh key into the textarea.<br/>
 When the Status is "deallocated" press on the button "Start".<br/>
 The machine needs about 2 minutes to be fully powered on.<br/>
 When the server is powered on, you can access the server using ssh on port 2200 using the provided certificate.
+
 On Linux/Mac:
 Copy the private key to ```~\.ssh\id_ed25519``` (if you are using a different location, change that in the ssh command:
-```ssh grader@udacity-postgresql-test.northeurope.cloudapp.azure.com -p 2200 -i ~\.ssh\id_ed25519```
+> ```ssh grader@udacity-postgresql-test.northeurope.cloudapp.azure.com -p 2200 -i ~\.ssh\id_ed25519```
+
 On Windows:
 use the same command as in Linux/Mac in powershell or use putty:
 Host Name (or IP address): grader@udacity-postgresql-test.northeurope.cloudapp.azure.com
