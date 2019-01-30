@@ -118,10 +118,10 @@ sudo -H -u www-data pip3 install -r /var/www/udacity_fsnd_itemcatalog_backend/re
 ## Security ##
 The directory /var/www/udacity_fsnd_itemcatalog_backend was set to the owner ```root``` and the group ```www-data``` and permissions where set to:
 
-*.py: 550
-plain text files: 700
-itemcatalog.db: 760
-client_secrets.json: 740
+*.py: 550<br/>
+plain text files: 700<br/>
+itemcatalog.db: 760<br/>
+client_secrets.json: 740<br/>
 
 The *.py and the myapp.wsgi files where set to owner ```www-data``` and group ```www-data```
 The plain text files where set to owner ```root``` and group ```root```
