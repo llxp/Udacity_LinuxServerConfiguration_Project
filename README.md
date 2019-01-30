@@ -123,8 +123,8 @@ plain text files: 700<br/>
 itemcatalog.db: 760<br/>
 client_secrets.json: 740<br/>
 
-The *.py and the myapp.wsgi files where set to owner ```www-data``` and group ```www-data```
-The plain text files where set to owner ```root``` and group ```root```
+The *.py and the myapp.wsgi files where set to owner ```www-data``` and group ```www-data```<br/>
+The plain text files where set to owner ```root``` and group ```root```<br/>
 The directories ```static``` and ```templates``` where set to owner ```www-data``` and group ```www-data```
 
 #
