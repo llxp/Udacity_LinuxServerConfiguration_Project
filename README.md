@@ -23,7 +23,7 @@ Connection -> SSH -> Auth:
 Private key file for authentication: <br/>file with private key converted to ppk (putty file format for private keys)
 When the access on the server is over, simply press on "Stop" again to poweroff the server.<br/>
 
-#### Image: Ubuntu 18.04.1 LTS (amd64) ####
+#### Image: Ubuntu 18.04 LTS ####
 #### packages installed: ####
 - apache2
 - python3
@@ -114,6 +114,41 @@ sudo -H -u www-data pip install flask-bootstrap
 sudo pip install -r /var/www/udacity_fsnd_itemcatalog_backend/requirements.txt
 sudo -H -u www-data pip3 install -r /var/www/udacity_fsnd_itemcatalog_backend/requirements.txt
 ```
+
+## Setup a VM in Azure ##
+This project was setup in the microsoft azure cloud. Here I made a short buide how to create a small VM there. If you want to select other options, it is up to you.
+To create a new VM in Azure, go to the azure portal: [portal.azure.com](https://portal.azure.com)
+If you haven't created a Subscription yet, create a [free subscription](https://azure.microsoft.com/en-us/free/). 
+If you are logged in, go to "Virtual Machines" and "Add".
+- There select your subscription.
+- Then select an existing [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview#resource-groups) or create a new one.
+- Virtual machine name: **some unique name**
+- Region: **North Europe**
+- Avaliability Options: **No Infrastructure redundancy required**
+- Image: **Ubuntu 18.04 LTS**
+- Size: **Standard B1s**
+- For simplicity select as "Authentication Type" **Password** and specify a username and password. (will be changed later)
+- "Login with Azure Active Directory (Preview)": **Off**
+- "Public inbound ports": **Allow selected ports**
+- "Select inbound ports": **HTTP(80), SSH(22)**
+- On the next page "Disks":
+	- "OS disk type": **Standard HDD**
+On the "Review + create" page:
+	- On the Top you can see the pricing of the vm. (should be around 0.0095 EUR/hr at the moment of this guide)
+	- Click "create" if you are ok with the shown price.
+At the end, you will see a dialog, showing, that the vm is beeing deployed.
+If the deployment is finished click on "go to resource" or go to "Virtual Machines" and click on the created vm.
+
+## Azure Networking guide for the VM ##
+- On the VM click on the "Networking" Tab.
+- There you will see the firewall rules for the network security group attached to the VM.
+- Click on "Add inbound port rule"
+	- Destination port ranges: **2200** (Alternate SSH port)
+	- Priority: **301**
+	- Name: **Alternate SSH port**
+
+### The guide for the azure functions ([Udacity-VM-Manager](https://udacity-vm-manager.azurewebsites.net/)) can be found at [this repository](https://github.com/llxp/vm-manager) ###
+
 
 ## Security ##
 The directory /var/www/udacity_fsnd_itemcatalog_backend was set to the owner ```root``` and the group ```www-data``` and permissions where set to:
