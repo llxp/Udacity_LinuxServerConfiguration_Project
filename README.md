@@ -119,6 +119,7 @@ sudo -H -u www-data pip3 install -r /var/www/udacity_fsnd_itemcatalog_backend/re
 This project was setup in the microsoft azure cloud. Here I made a short buide how to create a small VM there. If you want to select other options, it is up to you.
 To create a new VM in Azure, go to the azure portal: [portal.azure.com](https://portal.azure.com)
 If you haven't created a Subscription yet, create a [free subscription](https://azure.microsoft.com/en-us/free/). 
+
 If you are logged in, go to "Virtual Machines" and "Add".
 - There select your subscription.
 - Then select an existing [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview#resource-groups) or create a new one.
