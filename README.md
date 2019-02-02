@@ -1,9 +1,9 @@
 
 # Linux Server Configuration Project
 
-Host: [udacity-postgresql-test.northeurope.cloudapp.azure.com](http://udacity-postgresql-test.northeurope.cloudapp.azure.com)
-ip: dynamic
-SSH Port: 2200
+Host: [udacity-postgresql-test.northeurope.cloudapp.azure.com](http://udacity-postgresql-test.northeurope.cloudapp.azure.com)<br/>
+ip: dynamic<br/>
+SSH Port: 2200<br/>
 grader password: GRADER
 
 ### Access to the server: ###
